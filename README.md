@@ -2,7 +2,11 @@
 This project builds an installer that builds a personalized IntelliJ project setting file.
 
 # Why?
-When you're working with JetBrains IntelliJ in a team you need to share common project settings between all developers. This works fine by using IntelliJ "Export Settings" function until you have project settings personalized for each developer. For example: Whenever developer's name (not the OS login name) should appear in a file header, or developer's email address should be part of the class'es javadoc, you need to post-process IntelliJ settings after export. That's why this project is for!
+When you're working with JetBrains IntelliJ in a team you need to share common project settings between all developers.
+This works fine by using IntelliJ "Export Settings" function until you have project settings personalized for each
+developer. For example: Whenever developer's name (not the OS login name) should appear in a file header, or developer's
+email address should be part of the class'es javadoc, you need to post-process IntelliJ settings after exporting them
+from the IDE. That's why this project is for!
 
 # How?
 As usual I love to wrap the wrapper - same as here. The process is like as follows.
