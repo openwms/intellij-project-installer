@@ -1,6 +1,8 @@
 # intellij-project-installer
 This project builds an installer that builds a personalized IntelliJ project setting file.
 
+## In GPLv2 -> Use it but don't extends it on your own!
+
 # Why?
 When you're working with JetBrains IntelliJ in a team you need to share common project settings between all developers.
 This works fine by using IntelliJ "Export Settings" function until you have project settings personalized for each
