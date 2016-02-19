@@ -1,7 +1,7 @@
 # intellij-project-installer
 This project builds an installer that builds a personalized IntelliJ project setting file.
 
-#### Licence GPLv2 -> Use it but don't extends it on your own!
+#### Licence GPLv2 -> Use it but don't extend it without pushing back your changes!
 
 # Why?
 When you're working with JetBrains IntelliJ in a team you need to share common project settings between all developers.
