@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<langpack>
+  <str id="user.info" txt="User Information" />
+  <str id="user.info.desc" txt="This information is used in file headers and comment lines." />
+  <str id="text.user.name" txt="Username" />
+  <str id="text.user.firstname" txt="Firstname" />
+  <str id="text.user.lastname" txt="Lastname" />
+  <str id="text.user.email" txt="Email" />
+  <str id="validator.empty" txt="This field cannot be empty" />
+  <str id="validator.password" txt="The password must contain at least 5 characters" />
+  <str id="validator.email" txt="Please enter a valid email address" />
+  <str id="jdk.info" txt="Java SDK installation path" />
+  <str id="text.cpheader" txt="Copyright Header &#13;&#10; (Java block comment)" />
+  <str id="text.java.home" txt="JDK installation directory (JAVA_HOME)" />
+</langpack>

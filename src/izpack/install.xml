@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<installation version="1.0">
+
+    <variables>
+        <variable name="JAVA_HOME" value="${ENV[JAVA_HOME]}" />
+        <variable name="eclipse_path" value="${INSTALL_PATH}/eclipse" />
+    </variables>
+
+    <conditions>
+        <condition type="packselection" id="eclipseinstallation">
+            <packid>packEclipse</packid>
+        </condition>
+    </conditions>
+
+    <!--
+		The info section. The meaning of the tags should be natural ...
+	-->
+    <info>
+        <appname>Interface21 Intelli Project Settings Personalizer</appname>
+        <appversion>1.0</appversion>
+        <authors>
+            <author name="Heiko Scherrer (project admin)" email="scherrer@openwms.org" />
+        </authors>
+        <url>http://www.openwms.org/</url>
+        <requiresjdk>no</requiresjdk>
+        <run-privileged condition="izpack.windowsinstall.vista|izpack.windowsinstall.7" />
+    </info>
+
+    <!--
+        The gui preferences indication. Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs width="650" height="400" resizable="yes">
+        <modifier key="allXGap" value="5" />
+        <modifier key="allYGap" value="5" />
+        <modifier key="paragraphYGap" value="15" />
+        <modifier key="useHeadingPanel" value="yes" />
+        <modifier key="headingLineCount" value="1" />
+        <modifier key="headingFontSize" value="2" />
+        <modifier key="headingBackgroundColor" value="0x00ffffff" />
+        <modifier key="headingPanelCounter" value="text" />
+        <modifier key="headingPanelCounterPos" value="inHeading" />
+        <laf name="metouia">
+            <os family="unix" />
+        </laf>
+        <laf name="looks">
+            <os family="windows" />
+            <param name="variant" value="extwin" />
+        </laf>
+    </guiprefs>
+
+    <!--
+		The locale section
+	-->
+    <locale>
+        <langpack iso3="eng" />
+        <langpack iso3="deu" />
+    </locale>
+
+    <!--
+		The resources section.
+	-->
+    <resources>
+        <res id="LicencePanel.licence" src="${resources.dir}/license/licenses.txt" />
+        <res id="TargetPanel.dir.windows" src="${resources.dir}/userinput/defaultdir.txt" />
+        <res id="TargetPanel.dir.unix" src="${resources.dir}/userinput/defaultdir_unix.txt" />
+        <res id="userInputSpec.xml" src="${resources.dir}/userinput/userinput.xml" />
+        <res id="userInputLang.xml_eng" src="${resources.dir}/userinput/userinput-eng.xml" />
+        <res id="userInputLang.xml_deu" src="${resources.dir}/userinput/userinput-deu.xml" />
+        <res id="Installer.image" src="${resources.dir}/userinput/installer-pic.png" />
+    </resources>
+
+    <!--
+		The panels section.
+	-->
+    <panels>
+        <panel classname="HelloPanel" />
+        <panel classname="LicencePanel" />
+        <panel classname="UserInputPanel" id="UserdataPanel" />
+        <panel classname="TargetPanel" />
+        <panel classname="PacksPanel" />
+        <panel classname="InstallPanel" />
+        <panel classname="FinishPanel" />
+    </panels>
+
+    <!--
+		The packs section. We specify our packs here.
+	-->
+    <packs>
+
+        <pack name="Personalize and package IntelliJ Settings" required="yes" preselected="yes">
+            <description>Requests your user details and customizes the IntelliJ project settings</description>
+            <fileset dir="${basedir}/settings" targetdir="$INSTALL_PATH" defaultexcludes="yes" />
+            <parsable targetfile="$INSTALL_PATH/codestyles/Interface21.xml" type="xml" />
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/File Header.java"/>
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/HTML Header.html" type="xml" />
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/Named Type Header.java" />
+            <parsable targetfile="$INSTALL_PATH/templates/AndroidComments.xml" type="xml" />
+        </pack>
+    </packs>
+
+</installation>

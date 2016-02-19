@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userInput>
+	<panel order="0">
+                <field type="title" align="left" txt="Sourceforge Developer Information" id="user.info" />
+		<field type="divider" align="top" />
+                <field type="staticText" align="left" txt="This information is used within the IDE to set the correct user information in the source code" id="user.info.desc" />
+		<field type="divider" align="top" />
+                <field type="space" />
+		<field type="text" variable="i_user_name">
+			<spec txt="Username:" id="text.user.name" size="20" set="$USER_NAME" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator"
+				txt="The field cannot be empty!" id="validator.empty" />
+		</field>
+		<field type="text" variable="i_user_firstname">
+			<spec txt="Firstname:" id="text.user.firstname" size="20" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator"
+				txt="The field cannot be empty!" id="validator.empty" />
+		</field>
+		<field type="text" variable="i_user_lastname">
+			<spec txt="Lastname:" id="text.user.lastname" size="20" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator"
+				txt="The field cannot be empty!" id="validator.empty" />
+		</field>
+		<field type="text" variable="i_user_email">
+			<spec txt="Email:" id="text.user.email" size="20" set="@users.sourceforge.net"
+				layout="O:12:U @ O:8:40 .A:4:4" resultFormat="displayFormat" />
+			<validator class="com.izforge.izpack.util.RegularExpressionValidator"
+				txt="Invalid email address!" id="validator.email">
+				<param name="pattern"
+					value="[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9._-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z0-9._-]{2,4}" />
+			</validator>
+		</field>
+	</panel>
+
+	<panel order="1">
+                <field type="title" align="left" txt="Java SDK installation path"
+			id="jdk.info" />
+		<field type="divider" align="top" />
+		<field type="text" variable="i_java_home">
+			<spec txt="JDK installation directory (JAVA_HOME):" id="text.java.home"
+				size="20" set="$JAVA_HOME" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator"
+				txt="The field cannot be empty!" id="validator.empty" />
+		</field>
+	</panel>
+
+</userInput>

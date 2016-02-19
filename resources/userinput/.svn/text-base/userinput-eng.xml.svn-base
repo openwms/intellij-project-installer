@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<langpack>
+  <str id="user.info" txt="Sourceforge User Information" />
+  <str id="user.info.desc" txt="This information is used within the IDE to set the correct user information in the source code" />
+  <str id="text.user.name" txt="Sourceforge Username:" />
+  <str id="text.user.firstname" txt="Firstname:" />
+  <str id="text.user.lastname" txt="Lastname:" />
+  <str id="text.user.email" txt="Email:" />
+  <str id="validator.empty" txt="This field cannot be empty" />
+  <str id="validator.password" txt="The password must contain at least 5 characters" />
+  <str id="validator.port" txt="A port must be a positive number (0..32768)" />
+  <str id="validator.email" txt="Please enter a valid email address" />
+  <str id="jdk.info" txt="Java SDK installation path" />
+  <str id="text.java.home" txt="JDK installation directory (JAVA_HOME):" />
+  <str id="eclipse.info" txt="Proxy Server Information for Eclipse" />
+  <str id="text.proxy.server.name" txt="Proxy Server hostname:" />
+  <str id="text.proxy.server.port" txt="Proxy Server port:" />
+</langpack>
