@@ -15,7 +15,7 @@ As usual I love to wrap the wrapper - same as here. The process is like as follo
  -  Run the IntelliJ Project Installer jar or exe file
  -  Go through the installation process and provide all mandatory fields
  -  The installation routine, running at the end of the process, will personalize IntelliJ settings and produce an `intellij-settings.jar` file and the end
- -  This generated JAR file can be easiliy imported by the developer that ran the installer
+ -  This generated JAR file can be easily imported by the developer that ran the installer
 
 ![1]
 
@@ -28,10 +28,6 @@ As usual I love to wrap the wrapper - same as here. The process is like as follo
 ![5]
 
 ![6]
-
-# What does Marius say?
-
-[![Taximann](http://img.youtube.com/vi/RnOILM63L-w/0.jpg)](https://www.youtube.com/watch?v=RnOILM63L-w)
 
 [1]: docs/1.png
 [2]: docs/2.png
