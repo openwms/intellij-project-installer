@@ -18,7 +18,15 @@
         <izpack.install.dir>/data/programs/IzPack</izpack.install.dir>
         <izpack.standalone.version>4.3.5</izpack.standalone.version>
     </properties>
-    
+
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <build>
         <resources>
           <resource>
