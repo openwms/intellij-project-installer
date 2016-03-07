@@ -12,9 +12,19 @@ from the IDE. That's why this project is for!
 # How it works
 We maintain an already exported set of IntelliJ settings in the `${basedir}/settings` folder. IntelliJ exports general
 settings in XML files, those are easy to post-process. This Maven project uses the installer from izpack.org to define
-the installer process and although the post-processing of the XML files. How does this installation process works? First
+the installer process and although the post-processing of the XML files. How does this installation process work? First
 all files under `${basedir}/settings` are copied to the target directory (given by the user). Afterwards all files in
-the target directory are scanned for izpack placeholders and values are replaced with user input.
+the target directory are scanned for izpack placeholders and values are replaced with user input. These are especially
+the following files
+
+```
+            <parsable targetfile="$INSTALL_PATH/codestyles/Interface21.xml" type="xml" />
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/File Header.java"/>
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/HTML Header.html" type="xml" />
+            <parsable targetfile="$INSTALL_PATH/fileTemplates/includes/Named Type Header.java" />
+            <parsable targetfile="$INSTALL_PATH/templates/AndroidComments.xml" type="xml" />
+```
+(taken from `${basedir}/src/izpack/install.xml`)
 
 To learn more see the definition of user input panel `${basedir}/resources/userinput.xml` and the install script
 `${basedir}/src/izpack/install.xml`.

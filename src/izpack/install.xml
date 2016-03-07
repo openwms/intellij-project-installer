@@ -86,7 +86,6 @@
 		The packs section. We specify our packs here.
 	-->
     <packs>
-
         <pack name="Personalize and package IntelliJ Settings" required="yes" preselected="yes">
             <description>Requests your user details and customizes the IntelliJ project settings</description>
             <fileset dir="${basedir}/settings" targetdir="$INSTALL_PATH" defaultexcludes="yes" />
