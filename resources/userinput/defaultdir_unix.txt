@@ -1,1 +1,1 @@
-$USER_HOME/openwms
+$USER_HOME/intellij-personalizr

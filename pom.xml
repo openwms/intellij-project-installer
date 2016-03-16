@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.interface21</groupId>
     <artifactId>io.interface21.tools.intellij.installer</artifactId>
-    <version>1.0</version>
+    <version>1.0-alpha-1</version>
     <name>${project.groupId} :: ${project.artifactId}-${project.version}</name>
     <description>This project creates an installer that builds a personalized IntelliJ project setting file.</description>
 
@@ -60,6 +60,7 @@
                             <goal>izpack</goal>
                         </goals>
                         <configuration>
+                            <installerFile>intellij-personalizr-${project.version}.jar</installerFile>
                             <descriptor>${basedir}/src/izpack/install.xml</descriptor>
                         </configuration>
                     </execution>
