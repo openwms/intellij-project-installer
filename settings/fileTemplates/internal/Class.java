@@ -5,5 +5,5 @@
  *
 #parse("Named Type Header.java")
  */
-public class ${NAME} {
+class ${NAME} {
 }

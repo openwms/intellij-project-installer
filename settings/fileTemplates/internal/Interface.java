@@ -5,5 +5,5 @@
  *
 #parse("Named Type Header.java")
  */
-public interface ${NAME} {
+interface ${NAME} {
 }
